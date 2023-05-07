@@ -20,11 +20,11 @@ const Starships = () => {
   return ( 
     <main className="starship-list">
       <h1>Starship List (Whooshooosh)</h1>
-        {starshipList.map((starship, idx) =>
-          <div key={idx} className="link-container">
-            <Link to={`/starships/${starship._id}`}>
-              {starship.name}
-            </Link>
+        {starshipList.map(starship =>
+          <div key={starship._id} className="ship-container">
+            <h1>
+            {starship.name}
+            </h1>
           </div>
         )}
     </main>
