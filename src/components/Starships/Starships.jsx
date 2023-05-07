@@ -14,15 +14,15 @@ const Starships = () => {
     }
     fetchAllStarships()
   }, [])
-
-  if (!starshipList.length) return <h1>Loadign starsips,.. </h1>
+  console.log(starshipList)
+  if (!starshipList) return <h1>Loadign starsips,.. </h1>
 
   return ( 
     <main className="starship-list">
       <h1>Starship List (Whooshooosh)</h1>
-        {starshipList.map(starship =>
-          <div key={starship._id} className="link-container">
-            <Link to={`/${starship._id}`}>
+        {starshipList.map((starship, idx) =>
+          <div key={idx} className="link-container">
+            <Link to={`/starships/${starship._id}`}>
               {starship.name}
             </Link>
           </div>
