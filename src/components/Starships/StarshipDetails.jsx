@@ -19,7 +19,6 @@ const StarshipDetails = () => {
 
   return (
     <main>
-      <div className="starship-details">
         <h1>Starship details</h1>
         <h2>Starship Name:       {starshipDetails.name}</h2>
         <p>Model: {starshipDetails.model}</p>
@@ -29,7 +28,7 @@ const StarshipDetails = () => {
         </p>
         <p>Hyperdrive Rating: {starshipDetails.hyperdrive_rating}</p>
         <button><Link to={'/'}>Return</Link></button>
-      </div>
+      
     </main>
   )
 }

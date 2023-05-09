@@ -1,6 +1,6 @@
 const StarshipCard = ({ starship }) => {
     return (
-          <p>{starship.name.toUpperCase()}</p>
+      <p>{starship.name.toUpperCase()}</p>
     )
   }
 
