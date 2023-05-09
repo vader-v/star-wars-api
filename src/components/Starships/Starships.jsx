@@ -15,19 +15,20 @@ const Starships = () => {
     fetchStarships()
   }, [])
 
-  if (!starshipList) return <h1>Loadign starsips,.. </h1>
+  if (!starshipList.length) return <h1>Loading starships.,.. </h1>
 
   return ( 
     <>
     <main className="starship-list">
       <h1>Starship List (Whooshooosh)</h1>
         {starshipList.map(starship =>
+        <button key={starship.name}>
           <Link 
-          key={starship.name}
-          to={`/starships/${starship.url.split('/')[5]}`}
-          >
+            to={`/starships/${starship.url.split('/')[5]}`}
+            >
             <StarshipCard starship={starship} />
           </Link>
+            </button>
         )}
     </main>
     </>
